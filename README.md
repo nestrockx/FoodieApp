@@ -2,7 +2,9 @@
 
 <p>
 Application is displaying random recipes to the user.
+<br>
 Written using Kotlin and MVVM architecture pattern.
+<br>
 Network requests handled with Retrofit.
 </p>
 
