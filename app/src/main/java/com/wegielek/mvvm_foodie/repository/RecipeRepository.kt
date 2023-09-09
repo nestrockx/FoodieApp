@@ -7,4 +7,6 @@ class RecipeRepository {
     suspend fun getRandomRecipe() =
         RetrofitInstance.api.getRandomRecipe()
 
+    suspend fun searchRecipe(searchQuery : String) =
+        RetrofitInstance.api.searchRecipe(searchQuery)
 }

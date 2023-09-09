@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MVVM_Foodie</string>
+    <string name="search_hint">Search</string>
+    <string name="search_navigation">Search recipe</string>
+    <string name="random_navigation">Random recipe</string>
+    <string name="empty"></string>
 </resources>

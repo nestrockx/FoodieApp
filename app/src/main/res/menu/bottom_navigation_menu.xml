@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/randomRecipeFragment"
+        android:title="@string/random_navigation"
+        android:icon="@drawable/casino_fill1_wght400_grad0_opsz24" />
+
+    <item android:id="@+id/searchRecipeFragment"
+        android:title="@string/search_navigation"
+        android:icon="@drawable/search_fill0_wght400_grad0_opsz48" />
+
+</menu>
