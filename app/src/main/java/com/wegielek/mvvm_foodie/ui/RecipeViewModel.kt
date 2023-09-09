@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class RecipeViewModel (
-    val recipeRepository: RecipeRepository
+    private val recipeRepository: RecipeRepository
 ) : ViewModel() {
 
     val recipe: MutableLiveData<Resource<RecipeResponse>> = MutableLiveData()

@@ -3,6 +3,7 @@
     <style name="Base.Theme.MVVM_Foodie" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/black</item>
     </style>
 
     <style name="Theme.MVVM_Foodie" parent="Base.Theme.MVVM_Foodie" />

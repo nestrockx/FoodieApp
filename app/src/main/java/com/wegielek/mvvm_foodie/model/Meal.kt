@@ -3,12 +3,12 @@ package com.wegielek.mvvm_foodie.model
 data class Meal(
     val idMeal: String,
     val strMeal: String,
-    val strDrinkAlternate: Any,
+    val strDrinkAlternate: String,
     val strCategory: String,
     val strArea: String,
-    val strInstructions: Any,
-    val strMealThumb: Any,
-    val strTags: Any,
+    val strInstructions: String,
+    val strMealThumb: String,
+    val strTags: String,
     val strYoutube: String,
     val strIngredient1: String,
     val strIngredient2: String,
@@ -50,8 +50,8 @@ data class Meal(
     val strMeasure18: String,
     val strMeasure19: String,
     val strMeasure20: String,
-    val strSource: Any,
-    val strImageSource: Any,
-    val strCreativeCommonsConfirmed: Any,
-    val dateModified: Any
+    val strSource: String,
+    val strImageSource: String,
+    val strCreativeCommonsConfirmed: String,
+    val dateModified: String
 )
