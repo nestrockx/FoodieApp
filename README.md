@@ -8,5 +8,4 @@ Written using Kotlin and MVVM architecture pattern.
 Network requests handled with Retrofit.
 </p>
 
-<img src="https://github.com/nestrockx/FoodieApp/assets/72703958/bc9cedf8-944b-4a36-9cf1-9e061355e241" width="400">
-
+<img src="https://github.com/nestrockx/FoodieApp/assets/72703958/65b16c43-15f3-4bf9-8242-f0562e157cc0" width="400">
