@@ -19,5 +19,9 @@
     <fragment
         android:id="@+id/recipeFragment"
         android:name="com.wegielek.mvvm_foodie.ui.fragments.RecipeFragment"
-        android:label="RecipeFragment" />
+        android:label="RecipeFragment" >
+        <argument
+            android:name="meal"
+            app:argType="com.wegielek.mvvm_foodie.model.Meal" />
+    </fragment>
 </navigation>

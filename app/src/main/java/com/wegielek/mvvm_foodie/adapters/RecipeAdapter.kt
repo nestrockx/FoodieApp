@@ -23,7 +23,6 @@ class RecipeAdapter : RecyclerView.Adapter<RecipeAdapter.MealViewHolder>() {
         override fun areContentsTheSame(oldItem: Meal, newItem: Meal): Boolean {
             return oldItem == newItem
         }
-
     }
 
     val differ = AsyncListDiffer(this, differCallback)

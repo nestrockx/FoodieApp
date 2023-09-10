@@ -5,9 +5,9 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.wegielek.mvvm_foodie.R
 import com.wegielek.mvvm_foodie.adapters.RecipeAdapter
@@ -44,6 +44,16 @@ class SearchRecipeFragment : Fragment(R.layout.fragment_search_recipe) {
 
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
+
+        recipeAdapter.setOnItemClickListener {
+            val bundle = Bundle().apply {
+                putSerializable("meal", it)
+            }
+            findNavController().navigate(
+                R.id.action_searchRecipeFragment_to_recipeFragment,
+                bundle
+            )
+        }
 
         var job: Job? = null
         binding.searchBox.addTextChangedListener { editable ->
