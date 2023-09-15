@@ -44,16 +44,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    override fun onBackPressed() {
-
-        val count = supportFragmentManager.backStackEntryCount
-
-        if (count == 0) {
-            super.onBackPressed();
-        } else {
-            supportFragmentManager.popBackStack()
-        }
-
-    }
-
 }

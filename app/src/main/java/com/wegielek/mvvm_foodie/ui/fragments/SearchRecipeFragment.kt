@@ -50,7 +50,7 @@ class SearchRecipeFragment : Fragment(R.layout.fragment_search_recipe) {
                 putSerializable("meal", it)
             }
             findNavController().navigate(
-                R.id.action_searchRecipeFragment_to_recipeFragment,
+                R.id.recipeFragment,
                 bundle
             )
         }
