@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wegielek.mvvm_foodie.R
@@ -30,8 +33,27 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         supportFragmentManager.findFragmentById(R.id.recipeNavHostFragment)
-            ?.let { binding.bottomNavigationView.setupWithNavController(it.findNavController()) }
+            ?.let {
+                binding.bottomNavigationView.setOnItemSelectedListener {item ->
+                    NavigationUI.onNavDestinationSelected(item, it.findNavController())
+                    return@setOnItemSelectedListener true
+                }
+            }
 
     }
+
+    override fun onBackPressed() {
+
+        val count = supportFragmentManager.backStackEntryCount
+
+        if (count == 0) {
+            super.onBackPressed();
+        } else {
+            supportFragmentManager.popBackStack()
+        }
+
+    }
+
 }
