@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
@@ -12,7 +11,6 @@ import com.wegielek.mvvm_foodie.R
 import com.wegielek.mvvm_foodie.databinding.FragmentRecipeBinding
 import com.wegielek.mvvm_foodie.ui.MainActivity
 import com.wegielek.mvvm_foodie.ui.RecipeViewModel
-import com.wegielek.mvvm_foodie.util.Resource
 
 class RecipeFragment : Fragment(R.layout.fragment_recipe) {
 

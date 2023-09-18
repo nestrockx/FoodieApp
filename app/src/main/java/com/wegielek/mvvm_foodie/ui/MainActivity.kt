@@ -2,15 +2,9 @@ package com.wegielek.mvvm_foodie.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.wegielek.mvvm_foodie.R
 import com.wegielek.mvvm_foodie.databinding.ActivityMainBinding
 import com.wegielek.mvvm_foodie.repository.RecipeRepository
