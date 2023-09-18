@@ -60,8 +60,19 @@ class RecipeViewModel (
 
     fun searchRecipe(searchQuery: String) = viewModelScope.launch {
         recipe.postValue(Resource.Loading())
-        val response = recipeRepository.searchRecipe(searchQuery)
-        recipe.postValue(handleSearchRecipeResponse(response))
+        try {
+            if(hasInternetConnection()) {
+                val response = recipeRepository.searchRecipe(searchQuery)
+                recipe.postValue(handleSearchRecipeResponse(response))
+            } else {
+                recipe.postValue(Resource.Error("No internet connection"))
+            }
+        } catch (t: Throwable) {
+            when(t) {
+                is IOException -> recipe.postValue(Resource.Error("Network Failure"))
+                else -> recipe.postValue(Resource.Error("Conversion Error"))
+            }
+        }
     }
 
     private fun handleSearchRecipeResponse(response: Response<RecipeResponse>) : Resource<RecipeResponse> {
