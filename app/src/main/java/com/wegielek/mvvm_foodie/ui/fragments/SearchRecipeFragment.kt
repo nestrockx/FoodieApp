@@ -45,12 +45,6 @@ class SearchRecipeFragment : Fragment(R.layout.fragment_search_recipe) {
         viewModel = (activity as MainActivity).viewModel
         setupRecyclerView()
 
-        binding.searchBox.let {
-            if (!binding.searchBox.toString().isNullOrEmpty()) {
-                viewModel.searchRecipe(binding.searchBox.toString())
-            }
-        }
-
 
         recipeAdapter.setOnItemClickListener {
             val bundle = Bundle().apply {
